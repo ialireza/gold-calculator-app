@@ -13,6 +13,7 @@ import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.google.android.gms.security.ProviderInstaller
 import com.ialireza.calculategold.databinding.ActivityMainBinding
 import java.text.DecimalFormat
 import java.text.DecimalFormatSymbols
@@ -30,6 +31,10 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        
+        // به‌روزرسانی امنیتی برای اندرویدهای قدیمی جهت حل مشکل SSL در لیست قیمت‌ها
+        upgradeSecurityProvider()
+        
         enableEdgeToEdge()
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
@@ -72,6 +77,17 @@ class MainActivity : AppCompatActivity() {
                 else -> false
             }
         }
+    }
+
+    private fun upgradeSecurityProvider() {
+        ProviderInstaller.installIfNeededAsync(this, object : ProviderInstaller.ProviderInstallListener {
+            override fun onProviderInstalled() {
+                // امنیت شبکه با موفقیت ارتقا یافت
+            }
+            override fun onProviderInstallFailed(errorCode: Int, recoveryIntent: Intent?) {
+                // ارتقای امنیت با خطا مواجه شد
+            }
+        })
     }
 
     private fun setupFeeTypeSpinner() {

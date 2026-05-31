@@ -55,6 +55,9 @@ dependencies {
     implementation(libs.okhttp)
     implementation(libs.androidx.lifecycle.viewmodel.ktx)
     implementation(libs.androidx.lifecycle.livedata.ktx)
+    
+    // Google Play Services for SSL Fix on old Androids
+    implementation(libs.play.services.base)
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
