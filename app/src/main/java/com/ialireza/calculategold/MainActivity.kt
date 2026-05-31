@@ -22,7 +22,6 @@ class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
     
-    // استفاده از Locale.US برای اطمینان از نمایش ویرگول انگلیسی به جای "و"
     private val symbols = DecimalFormatSymbols(Locale.US).apply {
         groupingSeparator = ','
     }
@@ -41,7 +40,6 @@ class MainActivity : AppCompatActivity() {
             insets
         }
 
-        // اطمینان از خالی بودن فیلدها در هنگام اجرای مجدد برنامه
         binding.etPrice.setText("")
         binding.etFee.setText("")
         binding.etWeight.setText("")
@@ -59,6 +57,10 @@ class MainActivity : AppCompatActivity() {
 
         binding.toolbar.setOnMenuItemClickListener { menuItem ->
             when (menuItem.itemId) {
+                R.id.action_prices -> {
+                    startActivity(Intent(this, PriceListActivity::class.java))
+                    true
+                }
                 R.id.action_guide -> {
                     showGuideDialog()
                     true
@@ -187,7 +189,6 @@ class MainActivity : AppCompatActivity() {
             val totalPerGram = price + constructionFeePerGram + profitPerGram + taxPerGram
             val result = totalPerGram * weight
 
-            // استفاده از قالب‌های متنی برای نمایش دقیق RTL
             binding.tvFeeResult.text = getString(R.string.toman_format, decimalFormat.format(constructionFeePerGram * weight))
             binding.tvProfitResult.text = getString(R.string.toman_format, decimalFormat.format(profitPerGram * weight))
             binding.tvTaxResult.text = getString(R.string.toman_format, decimalFormat.format(taxPerGram * weight))

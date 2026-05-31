@@ -13,13 +13,11 @@
     <string name="order_details">جزئیات سفارش</string>
     <string name="gold_details">مشخصات طلا</string>
 
-    <!-- شناسه‌های مورد نیاز برای لایه activity_main.xml -->
     <string name="construction_fee_result">اجرت ساخت:</string>
     <string name="seller_profit_result">سود فروشنده:</string>
     <string name="tax_result">مالیات:</string>
     <string name="total_result">جمع کل:</string>
 
-    <!-- الگوهای خروجی برای نمایش در کد MainActivity -->
     <string name="toman_format">%s تومان</string>
     <string name="fee_result_format">اجرت ساخت: %s تومان</string>
     <string name="profit_result_format">سود فروشنده: %s تومان</string>
@@ -32,4 +30,21 @@
     <string name="about_project">توضیحات محاسبات</string>
     <string name="calculation_guide">راهنمای محاسبات</string>
     <string name="guide_text">فرمول دقیق محاسبه قیمت طلا:\n\n۱. محاسبه سود فروشنده:\n(قیمت خام طلا + اجرت ساخت) × سود فروشنده (مثلا ۷٪).\n\n۲. محاسبه مالیات (ارزش افزوده):\n(اجرت ساخت + سود فروشنده) × مالیات (مثلا ۹٪).\n*(نکته: طبق قانون جدید، مالیات فقط به اجرت و سود تعلق می‌گیرد، نه به قیمت خود طلا).*\n\n۳. قیمت نهایی یک گرم:\nقیمت خام + اجرت ساخت + سود فروشنده + مالیات.\n\n۴. مبلغ کل فاکتور:\nقیمت نهایی یک گرم × وزن طلا.</string>
+
+    <!-- بخش قیمت‌های آنلاین -->
+    <string name="gold_prices">لیست قیمت لحظه‌ای</string>
+    <string name="refresh">بروزرسانی</string>
+    <string name="share_all">اشتراک این بازار</string>
+    <string name="share_everything">اشتراک هر دو بازار</string>
+    <string name="last_update">بروزرسانی: %s</string>
+    <string name="error_fetch">خطا در دریافت اطلاعات</string>
+    <string name="iran_market">بازار ایران</string>
+    <string name="global_market">بازار جهانی</string>
+
+    <!-- قالب‌های اشتراک‌گذاری حرفه‌ای -->
+    <string name="share_header_ir">⚜️ قیمت طلا و انواع سکه:</string>
+    <string name="share_header_global">💱 قیمت ارزها و کالاهای جهانی:</string>
+    <string name="share_footer">#تابلوطلا\n📍 https://t.me/centerproject</string>
+    <string name="share_date_label">🗓️ تاریخ و ساعت: %s</string>
+    <string name="share_text">اشتراک‌گذاری</string>
 </resources>
