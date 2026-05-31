@@ -9,7 +9,7 @@ android {
 
     defaultConfig {
         applicationId = "com.ialireza.calculategold"
-        minSdk = 24
+        minSdk = 21
         targetSdk = 35
         versionCode = 2
         versionName = "1.2.0"
