@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">محاسبه قیمت طلا</string>
+    <string name="gold_rate">نرخ طلا (تومان)</string>
+    <string name="construction_fee">اجرت ساخت</string>
+    <string name="construction_fee_type">نوع اجرت</string>
+    <string name="percent">درصد</string>
+    <string name="toman">تومان</string>
+    <string name="vat">ارزش افزوده (درصد)</string>
+    <string name="seller_profit">سود فروشنده (درصد)</string>
+    <string name="weight">وزن (گرم)</string>
+    <string name="calculate">محاسبه قیمت</string>
+    <string name="order_details">جزئیات سفارش</string>
+    <string name="gold_details">مشخصات طلا</string>
+
+    <!-- شناسه‌های مورد نیاز برای لایه activity_main.xml -->
+    <string name="construction_fee_result">اجرت ساخت:</string>
+    <string name="seller_profit_result">سود فروشنده:</string>
+    <string name="tax_result">مالیات:</string>
+    <string name="total_result">جمع کل:</string>
+
+    <!-- الگوهای خروجی برای نمایش در کد MainActivity -->
+    <string name="toman_format">%s تومان</string>
+    <string name="fee_result_format">اجرت ساخت: %s تومان</string>
+    <string name="profit_result_format">سود فروشنده: %s تومان</string>
+    <string name="tax_result_format">مالیات: %s تومان</string>
+    <string name="total_result_format">مبلغ نهایی: %s تومان</string>
+
+    <string name="about_me">درباره برنامه</string>
+    <string name="github">گیت‌هاب</string>
+    <string name="website">وب‌سایت</string>
+    <string name="about_project">توضیحات محاسبات</string>
+    <string name="calculation_guide">راهنمای محاسبات</string>
+    <string name="guide_text">فرمول دقیق محاسبه قیمت طلا:\n\n۱. محاسبه سود فروشنده:\n(قیمت خام طلا + اجرت ساخت) × سود فروشنده (مثلا ۷٪).\n\n۲. محاسبه مالیات (ارزش افزوده):\n(اجرت ساخت + سود فروشنده) × مالیات (مثلا ۹٪).\n*(نکته: طبق قانون جدید، مالیات فقط به اجرت و سود تعلق می‌گیرد، نه به قیمت خود طلا).*\n\n۳. قیمت نهایی یک گرم:\nقیمت خام + اجرت ساخت + سود فروشنده + مالیات.\n\n۴. مبلغ کل فاکتور:\nقیمت نهایی یک گرم × وزن طلا.</string>
+</resources>
